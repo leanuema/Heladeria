@@ -2,179 +2,147 @@ package com.leandro.srl;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         Scanner scanner1 = new Scanner(System.in);
-        Scanner scanner2 = new Scanner(System.in);
-        int numero;
-        String sabores;
-        String productoUno;
+        int numeroDeCajero;
+        String productoSeleccionado;
 
-        Helados primerPedido = new Helados();
-        Helados segundoPedido = new Helados();
-        Helados tercerPedido = new Helados();
+        System.out.println("Elija el cajero para poder iniciar su orden, oprima 1 (para el primer cajero), " +
+                "2 (para el segundo), o 3 (para el terero)");
+        numeroDeCajero = scanner.nextInt();
 
-        System.out.println("Elija el cajero para pedir la orden, oprima 1 (para el primer cajero), 2 (para el segundo), y 3 (para el terero)");
-        numero = scanner.nextInt();
+        if (numeroDeCajero == 1) {
 
-        if (numero == 1) {
+            System.out.println("Ah seleccionado al primer cajero, ingrese su pedido");
 
-            System.out.println("Usted eligio el primer cajero");
+            for (int i = 0; i < 5; i++) {
 
-            System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
-            productoUno = scanner1.nextLine();
+                System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
+                productoSeleccionado = scanner1.nextLine();
 
-            if (productoUno.equals("cono")) {
-                System.out.println("Usted eligio el cono, elija su primer sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setPrimerSabor(sabores);
+                if (productoSeleccionado.equals("cono")) {
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setSegundoSabor(sabores);
 
-                System.out.println("Su pedido es un cono con " + primerPedido.toString());
-            } else if (productoUno.equals("cuarto")) {
-                System.out.println("Usted eligio el cuarto de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                segundoPedido.setPrimerSabor(sabores);
+                    conoDeHeladoSeleccionado();
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setSegundoSabor(sabores);
+                } else if (productoSeleccionado.equals("cuarto")) {
 
-                System.out.println("Ingrese su tercer sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setTercerSabor(sabores);
+                    cuartoDeHeladoSeleccionado();
 
-                System.out.println(segundoPedido.toString());
-            } else if (productoUno.equals("kilo")) {
-                System.out.println("Usted eligio el kilo de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                tercerPedido.setPrimerSabor(sabores);
+                } else if (productoSeleccionado.equals("kilo")) {
 
-                System.out.println("Elija su segundo sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setSegundoSabor(sabores);
+                    kiloDeHeladoSeleccionado();
 
-                System.out.println("Elija su tercer sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setTercerSabor(sabores);
-
-                System.out.println("Elija su cuarto sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setCuartoSabor(sabores);
-
-                System.out.println(tercerPedido.toString());
+                }
             }
-        } else if (numero == 2) {
+        } else if (numeroDeCajero == 2) {
 
-            System.out.println("Usted eligio el segundo cajero");
+            System.out.println("Ah seleccionado al segundo cajero, ingrese su pedido");
 
-            System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
-            productoUno = scanner1.nextLine();
+            for (int i = 0; i < 10; i++) {
 
-            if (productoUno.equals("cono")) {
-                System.out.println("Usted eligio el cono, elija su primer sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setPrimerSabor(sabores);
+                System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
+                productoSeleccionado = scanner1.nextLine();
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setSegundoSabor(sabores);
+                if (productoSeleccionado.equals("cono")) {
 
-                System.out.println("Su pedido es un cono con " + primerPedido.toString());
-            } else if (productoUno.equals("cuarto")) {
-                System.out.println("Usted eligio el cuarto de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                segundoPedido.setPrimerSabor(sabores);
+                    conoDeHeladoSeleccionado();
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setSegundoSabor(sabores);
+                } else if (productoSeleccionado.equals("cuarto")) {
 
-                System.out.println("Ingrese su tercer sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setTercerSabor(sabores);
+                    cuartoDeHeladoSeleccionado();
 
-                System.out.println(segundoPedido.toString());
-            } else if (productoUno.equals("kilo")) {
-                System.out.println("Usted eligio el kilo de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                tercerPedido.setPrimerSabor(sabores);
+                } else if (productoSeleccionado.equals("kilo")) {
 
-                System.out.println("Elija su segundo sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setSegundoSabor(sabores);
+                    kiloDeHeladoSeleccionado();
 
-                System.out.println("Elija su tercer sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setTercerSabor(sabores);
-
-                System.out.println("Elija su cuarto sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setCuartoSabor(sabores);
-
-                System.out.println(tercerPedido.toString());
+                }
             }
-        } else if (numero == 3) {
+        } else if (numeroDeCajero == 3) {
 
-            System.out.println("Usted eligio el tercer cajero");
+            System.out.println("Ah seleccionado al tercer cajero, ingrese su pedido");
 
-            System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
-            productoUno = scanner1.nextLine();
+            for (int i = 0; i < 15; i++) {
 
-            if (productoUno.equals("cono")) {
-                System.out.println("Usted eligio el cono, elija su primer sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setPrimerSabor(sabores);
+                System.out.println("Escriba cono (como primera opcion), cuarto (como segunda opcion), y kilo (para tercer opcion ");
+                productoSeleccionado = scanner1.nextLine();
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                primerPedido.setSegundoSabor(sabores);
+                if (productoSeleccionado.equals("cono")) {
 
-                System.out.println("Su pedido es un cono con " + primerPedido.toString());
-            } else if (productoUno.equals("cuarto")) {
-                System.out.println("Usted eligio el cuarto de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                segundoPedido.setPrimerSabor(sabores);
+                    conoDeHeladoSeleccionado();
 
-                System.out.println("Ingrese su segundo sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setSegundoSabor(sabores);
+                } else if (productoSeleccionado.equals("cuarto")) {
 
-                System.out.println("Ingrese su tercer sabor");
-                sabores = scanner2.nextLine();
-                segundoPedido.setTercerSabor(sabores);
+                    cuartoDeHeladoSeleccionado();
 
-                System.out.println(segundoPedido.toString());
-            } else if (productoUno.equals("kilo")) {
-                System.out.println("Usted eligio el kilo de helado, elija sus sabores");
-                System.out.println("Sabor uno");
-                sabores = scanner2.nextLine();
-                tercerPedido.setPrimerSabor(sabores);
+                } else if (productoSeleccionado.equals("kilo")) {
 
-                System.out.println("Elija su segundo sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setSegundoSabor(sabores);
+                    kiloDeHeladoSeleccionado();
 
-                System.out.println("Elija su tercer sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setTercerSabor(sabores);
-
-                System.out.println("Elija su cuarto sabor");
-                sabores = scanner2.nextLine();
-                tercerPedido.setCuartoSabor(sabores);
-
-                System.out.println(tercerPedido.toString());
+                }
             }
         }
     }
+
+    public static void conoDeHeladoSeleccionado() {
+        Scanner scanner2 = new Scanner(System.in);
+        String saboresAElegir;
+        helado pedidoSele = new helado();
+
+        System.out.println("El cono dispone con una variedad de tan solo 2 sabores, ingrese su primer sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSele.setPrimerSaborDeseado(saboresAElegir);
+
+        System.out.println("Ingrese su segundo sabor desado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSele.setSegundoSaborDeseado(saboresAElegir);
+
+        System.out.println("Su pedido es un cono con " + pedidoSele.toString());
+    }
+
+    public static void cuartoDeHeladoSeleccionado() {
+        Scanner scanner2 = new Scanner(System.in);
+        String saboresAElegir;
+        helado pedidoSeleccionado = new helado();
+
+        System.out.println("El cuarto de helado viene con un maximo de 3 sabores, ingrese su primer sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setPrimerSaborDeseado(saboresAElegir);
+
+        System.out.println("Ingrese su segundo sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setSegundoSaborDeseado(saboresAElegir);
+
+        System.out.println("Ingrese su tercer sabor");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setTercerSaborDeseado(saboresAElegir);
+
+        System.out.println(pedidoSeleccionado.toString());
+    }
+
+    public static void kiloDeHeladoSeleccionado() {
+        Scanner scanner2 = new Scanner(System.in);
+        helado pedidoSeleccionado = new helado();
+        String saboresAElegir;
+
+        System.out.println("Ah elegido la promo del dia, el kilo de helado dispone de 4 gustos a elegir, elija su primer sabor");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setPrimerSaborDeseado(saboresAElegir);
+
+        System.out.println("Elija su segundo sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setSegundoSaborDeseado(saboresAElegir);
+
+        System.out.println("Elija su tercer sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setTercerSaborDeseado(saboresAElegir);
+
+        System.out.println("Elija su cuarto sabor deseado");
+        saboresAElegir = scanner2.nextLine();
+        pedidoSeleccionado.setCuartoSaborDeseado(saboresAElegir);
+    }
+
 }
