@@ -1,4 +1,4 @@
-package com.Leandro.srl;
+package com.leandro.srl;
 
 import java.util.Scanner;
 
@@ -19,39 +19,40 @@ public class Main {
 
         if (numero == 1) {
             System.out.println("Usted eligio el cono, elija su primer sabor");
-            primerPedido.setSaborUno("Vainilla");
+            sabores=scanner.nextLine();
+            primerPedido.setPrimerSabor(sabores);
 
             System.out.println("Ingrese su segundo sabor");
             sabores=scanner.nextLine();
-            primerPedido.setSaborDos(sabores);
+            primerPedido.setSegundoSabor(sabores);
 
             System.out.println("Su pedido es un cono con " + primerPedido.toString());
         }
         else if (numero==2){
             System.out.println("Usted eligio el cuarto de helado, elija sus sabores");
-            segundoPedido.setSaborUno("Chocolate");
+            segundoPedido.setPrimerSabor("Chocolate");
 
             System.out.println("Ingrese su segundo sabor");
-            segundoPedido.setSaborDos("Crema");
+            segundoPedido.setSegundoSabor("Crema");
 
             System.out.println("Ingrese su tercer sabor");
-            segundoPedido.setSaborTres("Vainilla");
+            segundoPedido.setTercerSabor("Vainilla");
 
             System.out.println(segundoPedido.toString());
         }
 
         else if (numero==3){
             System.out.println("Usted eligio el kilo de helado, elija sus sabores");
-            tercerPedido.setSaborUno("Vainilla");
+            tercerPedido.setPrimerSabor("Vainilla");
 
             System.out.println("Elija su segundo sabor");
-            tercerPedido.setSaborDos("Chocolate");
+            tercerPedido.setSegundoSabor("Chocolate");
 
             System.out.println("Elija su tercer sabor");
-            tercerPedido.setSaborTres("Crema");
+            tercerPedido.setTercerSabor("Crema");
 
             System.out.println("Elija su cuarto sabor");
-            tercerPedido.setSaborCuatro("Maracuya");
+            tercerPedido.setCuartoSabor("Maracuya");
 
             System.out.println(tercerPedido.toString());
         }
